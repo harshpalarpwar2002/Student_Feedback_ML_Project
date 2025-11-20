@@ -15,29 +15,22 @@ st.set_page_config(
 # ---------------------- CUSTOM CSS ----------------------
 st.markdown("""
     <style>
-        .main-box { 
-            background-color: #f0f9ff; 
-            padding: 20px; 
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        /* Remove Streamlit top space */
+        div.block-container {
+            padding-top: 0rem !important;
         }
-        .metric-card {
-            background: linear-gradient(135deg, #6EE7B7, #3B82F6);
-            padding: 20px;
-            border-radius: 15px;
-            color: white;
-            text-align: center;
-            font-size: 20px;
-            font-weight: bold;
-        }
-        .footer {
-            text-align:center;
-            padding:10px;
-            margin-top:30px;
-            color: #555;
+
+        /* Remove Streamlit default toolbar/header */
+        header {visibility: hidden;}
+        footer {visibility: hidden;}
+
+        /* Optional: remove extra white padding around layout */
+        .css-18e3th9 {
+            padding-top: 0 !important;
         }
     </style>
 """, unsafe_allow_html=True)
+
 
 # ---------------------- SIDEBAR ----------------------
 st.sidebar.title("📌 Navigation")
